@@ -14,4 +14,4 @@ class ProductPageLocators():
     PRODUCT_PAGE = (By.CLASS_NAME, "btn-add-to-basket")
     PRICE = (By.CSS_SELECTOR, '.product_main .price_color')
     NAME = (By.CSS_SELECTOR, '.product_main h1')
-    ALERT_LIST = (By.CSS_SELECTOR, '.alertinner strong')
+    ALERT_LIST = (By.CSS_SELECTOR, '#messages > div:nth-child(1) > div')
