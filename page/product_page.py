@@ -13,17 +13,17 @@ class ProductPage(BasePage):
         assert self.is_element_present(*ProductPageLocators.PRODUCT_PAGE), "Product page is not presented"
 
     def should_be_the_same_price(self):
-        alert_name = self.browser.find_elements(*ProductPageLocators.ALERT_LIST)[0].text
+        alert_name = self.browser.find_element(*ProductPageLocators.ALERT_NAME).text
         name = self.browser.find_element(*ProductPageLocators.NAME).text
         assert alert_name == name, "The name in the basket does not match"
 
     def should_be_the_same_book_name(self):
-        alert_price = self.browser.find_elements(*ProductPageLocators.ALERT_LIST)[2].text
+        basket_price = self.browser.find_element(*ProductPageLocators.BASKET_PRICE).text
         price = self.browser.find_element(*ProductPageLocators.PRICE).text
-        assert alert_price == price, "The price in the basket does not match"
+        assert basket_price == price, "The price in the basket does not match"
 
     def should_not_be_success_message(self):
-        assert self.is_not_element_present(*ProductPageLocators.ALERT_LIST), "Success message is presented, but " \
+        assert self.is_not_element_present(*ProductPageLocators.ALERT_NAME), "Success message is presented, but " \
                                                                              "should not be "
 
     def should_see_as_disappearing_message(self):

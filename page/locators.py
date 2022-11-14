@@ -5,7 +5,7 @@ class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     BASKET_LINK = (By.CSS_SELECTOR, ".btn-group .btn-default")
-    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+    USER_ICON = (By.CLASS_NAME, "icon-user")
 
 
 class MainPageLocators():
@@ -25,7 +25,9 @@ class ProductPageLocators():
     PRODUCT_PAGE = (By.CLASS_NAME, "btn-add-to-basket")
     PRICE = (By.CSS_SELECTOR, '.product_main .price_color')
     NAME = (By.CSS_SELECTOR, '.product_main h1')
-    ALERT_LIST = (By.CSS_SELECTOR, '#messages > div:nth-child(1) > div')
+    ALERT_NAME = (By.CSS_SELECTOR, '#messages > div:nth-child(1) > div > strong')
+    BASKET_PRICE = (By.CSS_SELECTOR, '#messages > div.alert.alert-safe.alert-noicon.alert-info.fade.in > div > '
+                                     'p:nth-child(1) > strong')
 
 
 class BasketPageLocators():
